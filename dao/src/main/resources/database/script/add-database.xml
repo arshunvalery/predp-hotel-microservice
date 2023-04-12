@@ -1,0 +1,39 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="28-03-2023-13-37-56" author="Aet">
+        <createTable tableName="guests">
+            <column name="id" type="UUID">
+            </column>
+
+            <column name="name" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="surname" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="tel" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="age" type="int">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="gender" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="cash" type="int">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+        <addPrimaryKey tableName="guests" columnNames="id" constraintName="pkguestsid"/>
+    </changeSet>
+
+</databaseChangeLog>
